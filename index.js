@@ -1,6 +1,9 @@
 var cart = [];
 
-function getCart() {
+function getCart(item) {
+ var itemObj = {}
+ itemObj[item] = Math.floor(Math.random() * 100);
+ cart.push(itemObj)
  return cart;
 }
 
