@@ -1,7 +1,7 @@
 var cart = [];
 
 function getCart(item) {
- var itemObj = {}
+ var itemObj = {};
  itemObj[item] = Math.floor(Math.random() * 100);
  cart.push(itemObj)
  return cart;
