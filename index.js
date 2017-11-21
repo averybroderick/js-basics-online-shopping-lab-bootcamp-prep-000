@@ -18,18 +18,17 @@ function addToCart(item) {
 }
 
 function viewCart() {
+  var myStr = "";
   if(cart.length === 0) {
     console.log("Your shopping cart is empty.")
   } else if (cart.length === 1) {
-    var myStr = "";
-    myStr += `${cart[0].keys[0]} at ${cart[0].values[0]}.`;
+    myStr += `${Object.keys(cart[i])[0]} at ${Object.values(cart[i])[0]}.`;
   } else {
-    var myStr = "";
     for (var i = 0; i < cart.length; i++) {
-      if (i < cart.length -1) {
-        myStr += `${cart[i].keys[0]} at ${cart[i].values[0]}, `;
+      if (i < cart.length - 1) {
+        myStr += `${Object.keys(cart[i])[0]} at ${Object.values(cart[i])[0]}, `;
       } else {
-        myStr += `and ${cart[i].keys[0]} at ${cart[i].values[0]}.`
+        myStr += `and ${Object.keys(cart[i])[0]} at ${Object.values(cart[i])[0]}.`
       }
     }
   }
