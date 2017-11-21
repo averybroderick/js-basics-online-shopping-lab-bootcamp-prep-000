@@ -22,15 +22,14 @@ function viewCart() {
     console.log("Your shopping cart is empty.")
   } else if (cart.length === 1) {
     var myStr = "";
-      myStr += `${cart[0].keys[0]} at ${cart[0].values[0]}.`;
-    }
+    myStr += `${cart[0].keys[0]} at ${cart[0].values[0]}.`;
   } else {
     var myStr = "";
     for (var i = 0; i < cart.length; i++) {
       if (i < cart.length -1) {
-        myStr += `${cart[i].keys[0]} at ${cart[i].values[0]} and `;
+        myStr += `${cart[i].keys[0]} at ${cart[i].values[0]}, `;
       } else {
-        myStr += `${cart[i].keys[0]} at ${cart[i].values[0]}.`
+        myStr += `and ${cart[i].keys[0]} at ${cart[i].values[0]}.`
       }
     }
   }
