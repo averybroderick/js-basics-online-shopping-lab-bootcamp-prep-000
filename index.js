@@ -26,9 +26,9 @@ function viewCart() {
     myStr += `${Object.keys(cart[0])[0]} at $${Object.values(cart[0])[0]}.`;
   } else {
     for (var i = 0; i < cart.length; i++) {
-      if (cart.length === 2 && i < cart.length - 1) {
+      if (cart.length === 2 && i !== 1) {
         myStr += `${Object.keys(cart[i])[0]} at $${Object.values(cart[i])[0]} and `;
-      } else if (cart.length === 2 && i === 2) {
+      } else if (cart.length === 2 && i === 1) {
          myStr += `${Object.keys(cart[i])[0]} at $${Object.values(cart[i])[0]}.`
       } else if (cart.length > 2 && i < cart.length - 1) {
         myStr += `${Object.keys(cart[i])[0]} at $${Object.values(cart[i])[0]}, `;
