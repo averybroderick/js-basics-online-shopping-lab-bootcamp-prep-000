@@ -49,12 +49,16 @@ function total() {
 }
 
 function removeFromCart(item) {
+  var hasItem = false;
   for(var i = 0; i < cart.length; i++) {
     if(cart[i].hasOwnProperty(item)) {
-      delete cart[i][item];
-    } else {
-      console.log("That item is not in your cart.");
+      hasItem = true;
+      cart.splice(i, 1)
+      console.log(cart)
     }
+  }
+  if(!hasItem) {
+    console.log("That item is not in your cart.")
   }
 }
 
